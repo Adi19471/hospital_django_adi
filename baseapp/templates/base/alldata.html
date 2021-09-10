@@ -1,0 +1,78 @@
+{% include 'base/base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<div>
+    <div class="container">
+        <h4 class="text-center text-info bg-warning mt-1">ALL MODESL ORM DISPLAY</h4>
+    </div>
+</div>
+
+
+
+<table class="table">
+    <thead class="table-dark">
+        <tr>
+            <th>sr.no</th>
+            <th>Description</th>
+            <th>MODELQUERY</th>
+            <th scope="col">AGE</th>
+            <th>NAME</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for patient in all %}
+        <tr>
+            <th>1</th>
+            <td>Patient age is gretaer than 10</td>
+            <td>{{agequery_display_key}}</td>
+            <td>{{patient.age}}</td>
+            <td>{{patient.first_name}} {{patient.last_name}}</td>
+
+        </tr>
+        {% endfor %}
+
+        {% for patient in firstnamelastname_dispaly_key %}
+        <tr>
+            <th>2</th>
+            <td>Patient FIRSTNAME LAST NAME PRINT startswith 's' and last name 'l'</td>
+            <td>{{query_display_key}}</td>
+            <td>{{last_first}}</td>
+            <td>{{patient.first_name}} {{patient.last_name}}</td>
+            <!-- <td>{{agr}}</td> -->
+
+        </tr>
+        {% endfor %}
+
+
+
+        <tr>
+            <td>2</td>
+            <td>Patient avarage data is equal to </td>
+            <td>{{agr}}</td>
+            <td>{{counts}}</td>
+           
+
+        </tr>
+    
+
+    </tbody>
+</table>
+{% endblock %}
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

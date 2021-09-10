@@ -1,0 +1,24 @@
+{% extends "base/base.html" %}
+
+{% block content %}
+
+{% load static %}
+
+{% load crispy_forms_tags %}
+  
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-xl-6 col-sm-4 offset-4">
+            <h1 class="btn btn-outline-info">DJANGO HCL INSURENCE REGISTRATION</h1>
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{fm|crispy}}
+                <input type="submit" value="Submit" class="btn btn-info">
+                <input type="reset" value="Cancel" class="btn btn-outline-info bg-dark ">
+            </form>
+            <a href="{% url 'login' %}" class="mt-5">Already exist user...!</a>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

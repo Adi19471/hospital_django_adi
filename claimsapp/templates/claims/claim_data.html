@@ -1,0 +1,39 @@
+{% include "base/base.html" %}
+
+{% load static %}
+{% block content %}
+
+<h4 class="alert alert">DJANGO CLAIMDATA</h4>
+
+
+<table class="table table-striped bg-dark text-white ">
+    <thead>
+        <tr>
+            <th>CLAIM_NUMBER</th>
+            
+            <th>HOSPITAL_ID</th>
+            <th>CLAIMSTATUS</th>
+            <th>PATIENT_NAME</th>
+            <th>INSURENCE_COMAPNY</th>
+            <th>DEATILES</th>
+            <th>CLAIM_DETAILES</th>
+        </tr>
+    </thead >
+    <tbody class="text-info">
+        {% for each_claim in insurencedata %}
+        <tr>
+            <td>{{ each_claim.claim_number }}</td>
+            <td>{{ each_claim.claim_status }}</td>
+            <td>{{ each_claim.hospital_id }}</td>
+           
+            <td>{{ each_claim.patient_id }}</td>
+            <td>{{ each_claim.company }}</td>
+          
+            <td>{{ each_claim.Claim_datees }}</td>
+            <td>{{ each_claim.detailes }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

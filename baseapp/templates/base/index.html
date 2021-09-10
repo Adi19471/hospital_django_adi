@@ -1,0 +1,40 @@
+{% include 'base/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<style>
+  h1 {
+    margin-top: -60px;
+  }
+
+  .dispaly {
+    width: 520px;
+    height: 500px;
+    margin-right: -100px;
+  }
+</style>
+
+<div class="container">
+  <div class="jumbotron">
+
+    <div class="row">
+      <div class="col-sm-6">
+        <h1 class="alert alert-primary bg-info text-center">DJANGO HOSPITAL</h1>
+        <img class="dispaly" src="{% static 'base/images/two.jpg' %}" class="img-thumbnail" alt="">
+      </div>
+
+      <div class="col-sm-6">
+        <h1 class="alert alert-primary bg-info ">DJANGO HOSPITAL</h1>
+        <img class="dispaly" src="{% static 'base/images/one.jpg' %}" class="img-thumbnail" alt="">
+      </div>
+    </div>
+
+    <div class="text-center mt-4 bg-dark text-white mr-5 ml-5">
+      @copy;All rights resoreved By  Hospial DJANGO-ADI
+    </div>
+
+  </div>
+</div>
+
+{% endblock content %}

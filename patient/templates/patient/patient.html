@@ -1,0 +1,66 @@
+{% include "base/base.html" %}
+
+{% load static %}
+{% block content %}
+
+
+<h3 class="alert alert-info">DJANGO PATIENT DETAILES</h3>
+
+<div class="container">
+
+
+  {% for all_patient in all_patient %}
+
+  <div class="card">
+    <img class="img-fluid" src="{{ all_patient.profileimage.url }}" alt="..."  width="400px" height="300px">
+    <div class="card-body">
+
+      <h5 class="card-text">
+        patient id:-{{all_patient.patient_id}}
+      </h5>
+
+      <p class="card-title">
+      <h5>patient Name</h5>{{all_patient.first_name}} {{all_patient.last_name }}</p>
+    </div>
+
+    <div class="text-muteed"><a href="{% url 'fulldetailes' all_patient.slug %}" class="btn btn-info">View..MORE</a></div>
+  
+  <!-- PATIENT EDIT SHOW DETIILES IN LINE PAGE CLICK BUUTON -->
+
+
+
+    <!-- <li class="list-group-item">
+      <h5>patient Age</h5>{{all_patient.age}}
+    </li>
+
+    <li class="list-group-item">
+      <h5>patient categery</h5> {{all_patient.gender }}
+    </li>
+
+    <li class="list-group-item">
+      <h5>patient DateofBirth</h5> {{all_patient.dateofbirth}}
+    </li>
+
+    <li class="list-group-item">
+      <h5>patient Mobile Number</h5> {{all_patient.mobile_number}}
+    </li>
+
+    <li class="list-group-item">
+      <h5>patient DOB</h5> {{all_patient.dateofbirth}}
+    </li>
+
+    <li class="list-group-item">
+      <h5>patient email</h5> {{all_patient.email}}
+    </li>
+
+    <li class="list-group-item">
+      <h5>patient address</h5> {{all_patient.address}}
+    </li>  -->
+
+</div>
+<br>
+
+    {% endfor %}
+{% endblock content %}
+
+</div>

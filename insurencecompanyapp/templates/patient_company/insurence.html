@@ -1,0 +1,27 @@
+{% include "base/base.html" %}
+
+{% load static %}
+{% block content %}
+
+<h4>DJANGO INSURENCE APP</h4>
+
+
+
+<div class="btn btn-info  text-white">
+    COMPANY DATA
+</div>
+<div class="card text-center">
+    {% for each_comoany in company_detailes %}
+   
+    <div class="card-body">
+        <h5 class="card-title">{{each_comoany.insurence_company_id}}</h5>
+        <p class="card-text">{{each_comoany.name}}</p>
+        <a href="#" class="btn btn-primary">{{each_comoany.detales}}</a>
+    </div>
+    {% endfor %}
+</div>
+</div>
+
+
+
+{% endblock %}
