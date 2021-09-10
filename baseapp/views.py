@@ -13,7 +13,7 @@ from django .db .models import Avg,Max,Min,Sum
 from .forms import ContactForm,ContactModelForm
 
 def index(request):
-    return render(request,'base\index.html')
+    return render(request,'base/index.html')
 
 
 def all_model_quires(request):
