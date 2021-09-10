@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     
     # third part modeules
     'crispy_forms',
+    'django_unused_media', 
     
 ]
 
